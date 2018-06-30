@@ -11,9 +11,10 @@ test:
 generate:
 	go generate .
 
-build: 
-	go build .
-	ls -l
+build:
+	cd server && go build .
+	cd wasm && GOARCH=wasm GOOS=js go build -o code.wasm .
+	ls -l server wasm
 
 run: build
-	./gowebasm
+	./server/server
