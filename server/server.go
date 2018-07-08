@@ -7,7 +7,7 @@ import (
 )
 
 func wasmHandler(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("request code")
+	fmt.Println("request code from",r.RemoteAddr, r.RequestURI)
 	w.Header().Set("Content-Type", "application/wasm")
 	http.ServeFile(w, r, "wasm/code.wasm")
 }

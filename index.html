@@ -15,8 +15,8 @@ license that can be found in the LICENSE file.
 
 <body>
    <header class="header">
-        <h1>todos</h1>
-	    <input class="new-todo" placeholder="What needs to be done?" autofocus>
+        <h1>RaffStudio TODO List</h1>
+	    <input class="new-todo" placeholder="What to do?" autofocus>
 	</header>
     <section class="main" id="thing" >Please wait...</section>
 
@@ -35,6 +35,9 @@ license that can be found in the LICENSE file.
 				</ul>
 				<button class="clear-completed">Clear completed</button>
 			</footer>
+        <h4>Backend served by Caddy, ported to native ARMv7 on a synology DS115j</h4>
+        <h4>Frontend rendered in WebAssembly, generated from Go 1.11-beta1</h4>
+        <h4><a href="./wasm">Wot ? Show me the code</a></h4>
 	<script src="wasm_exec.js"></script>
 
 	<script>
