@@ -26,9 +26,16 @@ func main() {
 	todo3 := Todo{
 		Title: "Take a Nap",
 	}
-
 	fmt.Println("Adding another task")
 	todolist.Todos = append(todolist.Todos, todo3)
 	err = todolist.Render()
 	fmt.Println(err)
+
+	time.Sleep(5 * time.Second)
+	todolist.Todos = append(todolist.Todos, Todo{Title: "And do something else"})
+	todolist.Render()
+
+	time.Sleep(5 * time.Second)
+	todolist.Todos = append(todolist.Todos, Todo{Title: "Did you forget to add this one"})
+	todolist.Render()
 }
